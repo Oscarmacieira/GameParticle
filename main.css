@@ -1,0 +1,314 @@
+@font-face {
+  font-family: "SpaceQuest";
+  src: url("fonts/SpaceQuest/SpaceQuest.ttf");
+}
+@font-face {
+  font-family: "Saira-Regular";
+  src: url("fonts/Saira-Regular.ttf");
+}
+
+hr {
+  width: 100%;
+  opacity: 0.5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  cursor: url(./img/cursor.cur), auto;
+  user-select: none;
+}
+
+.text-start {
+  text-align: start;
+  width: 100%;
+}
+
+p {
+  font-family: "Saira-Regular";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SpaceQuest";
+}
+.flex {
+  display: flex;
+}
+
+body {
+  font-family: "SpaceQuest";
+
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  color: white;
+  background-color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  user-select: none;
+  display: flex;
+  width: 100%;
+}
+#playerHealth-container {
+  width: 300px;
+  height: 30px;
+  border: 3px solid rgb(232, 130, 14);
+  background-color: black;
+  border-radius: 2px;
+  margin-left: 30px;
+  position: relative;
+  top: 50px;
+  display: flex;
+}
+
+#playerEnergy-container {
+  width: 300px;
+  height: 30px;
+  border: 3px solid rgb(232, 130, 14);
+  background-color: black;
+  border-radius: 2px;
+  margin-left: 30px;
+  position: relative;
+  top: 60px;
+  display: flex;
+}
+
+#playerEnergy {
+  background-color: rgb(232, 130, 14);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+#playerHealth {
+  background-color: #69b9eb;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+
+.page-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: rgb(15, 42, 100);
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+#welcome-message {
+  width: 300px;
+  text-align: center !important;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  background-color: rgb(255, 162, 0);
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 10px;
+  padding-inline: 30px;
+  font-weight: 300ƒw;
+  color: white;
+  font-family: "SpaceQuest";
+}
+
+button:hover {
+  background-color: rgb(53, 151, 196);
+  transition: ease 0.5s;
+}
+
+#competenceContainer {
+  position: fixed;
+  bottom: 0;
+
+  margin-inline: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 70px solid rgb(15, 42, 100);
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+}
+#comp1,
+#comp2,
+#comp3,
+#comp4,
+#comp5 {
+  border: 3px solid rgb(232, 130, 14);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  margin-inline: 20px;
+  width: 65px;
+  height: 65px;
+  background-color: aqua;
+  font-size: 2rem;
+}
+
+#comp1 {
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+}
+
+#comp2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    216deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(171, 171, 171, 1) 26%,
+    rgba(0, 0, 0, 1) 49%,
+    rgba(184, 184, 184, 1) 73%,
+    rgba(12, 2, 2, 1) 100%
+  );
+}
+
+#comp3 {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+#comp4 {
+  background: rgb(63, 251, 203);
+  background: radial-gradient(
+    circle,
+    rgba(63, 251, 203, 1) 0%,
+    rgba(83, 129, 210, 1) 22%,
+    rgba(150, 98, 124, 1) 59%,
+    rgba(156, 64, 83, 1) 100%
+  );
+}
+
+#comp5 {
+  background: rgb(69, 119, 120);
+  background: linear-gradient(
+    0deg,
+    rgba(69, 119, 120, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+#comp1-outter,
+#comp2-outter,
+#comp3-outter,
+#comp4-outter,
+#comp5-outter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.5;
+}
+
+#comp1-value {
+  position: absolute;
+  font-size: 1rem;
+  display: none;
+}
+
+.fading-value {
+  position: absolute;
+  font-size: 1rem;
+  animation: 0.5s appearValue;
+}
+
+@keyframes appearValue {
+  0% {
+    opacity: 0;
+    top: 0;
+    left: 40%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -30px;
+    left: 40%;
+  }
+}
+
+.bottom-anim {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    #54b3d6,
+    #54b3d6 50%,
+    #ffffff 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  width: fit-content;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom-anim:before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bottom-anim:hover {
+  background-position: 0;
+}
+
+.bottom-anim:hover::before {
+  width: 100%;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Particle</title>
+    <link rel="stylesheet" href="./main.css" />
+    <!-- Moralis -->
+    <script src="https://unpkg.com/moralis@1.5.9/dist/moralis.js"></script>
+  </head>
+  <body>
+    <header><span>Score: </span><span id="scoreEl">0</span></header>
+
+    <div id="modalEl" class="page-container">
+      <div class="modal">
+        <h1 id="endScore">0</h1>
+        <p>Points</p>
+        <br />
+        <button id="startGameBtn">Start Game</button>
+        <br />
+        <button id="btn-logout">Logout</button>
+      </div>
+    </div>
+
+    <div id="welcome-page" class="page-container">
+      <div class="modal">
+        <p id="welcome-message">
+          Hey! this game is for web 3 users, make sure to have metamask install.
+          You can find here a quick demo of the gameplay while we add features
+          and work on the tokenomics.
+        </p>
+        <br />
+        <button id="btn-login">Moralis Metamask Login</button>
+        <br />
+        <p id="btn-command" class="bottom-anim">> READ COMMANDS</p>
+      </div>
+    </div>
+
+    <div id="command-page" class="page-container">
+      <div class="modal">
+        <h4 class="text-start">Move</h4>
+        <p class="text-start">Right Click to move at your cursor location</p>
+
+        <hr />
+        <h4 class="text-start">Competence 1:</h4>
+        <p class="text-start">
+          Press "A" to throw projectiles at your enemies. Careful, you will
+          loose munitions but no worries, you can grab some by running over the
+          iron spawning across the same.
+        </p>
+
+        <hr />
+        <h4 class="text-start">Competence 2:</h4>
+        <p class="text-start">Press "Z" to speed up.</p>
+
+        <hr />
+        <h4 class="text-start">Competence 3:</h4>
+        <p class="text-start">
+          Press "E" to place a portal door. Press "E" a second time to place the
+          other portal door.
+        </p>
+
+        <hr />
+        <h4 class="text-start">Competence 4:</h4>
+        <p class="text-start">
+          Press "R" to detonate an exploosion at your current location to
+          destrooy ennemies.
+        </p>
+
+        <hr />
+        <h4 class="text-start">Competence 5:</h4>
+        <p class="text-start">
+          Press "D" to slow time a few seconds for your enemies.
+        </p>
+        <hr />
+
+        <button id="back-to-welcome" class="bottom-anim">Go Back</button>
+      </div>
+    </div>
+
+    <div id="competenceContainer">
+      <div id="comp1">
+        <div id="comp1-value">-1</div>
+        <div id="comp1-outter"></div>
+        <span id="comp1-nb"></span><span id="comp1-cooldown"></span>
+      </div>
+      <div id="comp2"><div id="comp2-outter"></div></div>
+      <div id="comp3">
+        <div id="comp3-outter"></div>
+        <span id="comp3-nb"></span>
+      </div>
+      <div id="comp4"><div id="comp4-outter"></div></div>
+      <div id="comp5"><div id="comp5-outter"></div></div>
+      <div>
+        <div id="playerHealth-container">
+          <div id="playerHealth">100/100</div>
+        </div>
+        <div id="playerEnergy-container">
+          <div id="playerEnergy">100/1000</div>
+        </div>
+      </div>
+    </div>
+
+    <canvas></canvas>
+
+    <!-- Moralis Script -->
+    <script type="text/javascript" src="./Moralis/main.js"></script>
+
+    <!-- Particles Animation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"
+      integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Game Scripts-->
+    <script src="./utils.js"></script>
+    <script src="./classes/GameObject.js"></script>
+    <script src="./classes/Portal.js"></script>
+    <script src="./classes/Shield.js"></script>
+
+    <script src="./classes/Particle.js"></script>
+    <script src="./classes/Projectile.js"></script>
+    <script src="./classes/Player.js"></script>
+    <script src="./classes/Enemy.js"></script>
+    <script src="./classes/Cursor.js"></script>
+
+    <script src="./Attacks.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla Boilerplate</title>
+  </head>
+
+  <body>
+    <h1>Moralis Hello World!</h1>
+  </body>
+</html>
