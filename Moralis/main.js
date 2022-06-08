@@ -1,6 +1,6 @@
 /* Moralis init code */
-const serverUrl = "https://xzqhqr1c89z6.usemoralis.com:2053/server";
-const appId = "53CV34rbzM56kjApv6R3ff3IAj7C5TdhQh72y8XY";
+const serverUrl = "https://wtjf6rurajha.usemoralis.com:2053/server";
+const appId = "SJ3XaPUatEHsLW1txCV6tnVnz84hdAA96sV3FQqA";
 Moralis.start({ serverUrl, appId });
 
 /* Authentication code */
